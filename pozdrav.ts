@@ -1,9 +1,18 @@
-function greeter(person) {
-    return "Hello, " + person;
+function greeter(person)
+{
+    /*return "Hello, " + person;*/
+    for (var _i = 0; _i < 5; _i++) {
+       return person;
+    }
+
 }
 
-let user = "Jane User";
-let znak
-let kolik
-
-document.body.innerHTML = greeter(user);
+function greet(elementId)
+{
+    var inputValue = (<HTMLInputElement>document.getElementById(elementId)).value;
+/*
+    if (inputValue.trim() == "")
+        inputValue = "World";
+*/
+    document.getElementById("greet").innerText = greeter(inputValue);
+}

@@ -8,17 +8,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <h1>PeanutDream</h1>
+
+
+    <h2>Vloz prvni znak</h2>
+    <form>
+        <input id="name" type="text" name="name" value="" onkeyup="greet('name')" />
+    </form>
+    <!--
+    <h2>Vloz druhy znak</h2>
+    <form>
+        <input id="name" type="text" name="name" value="" onkeyup="greet('name')" />
+    </form>
+    //-->
     <br>
-    <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem similique corporis reprehenderit sapiente,
-     tempora voluptatum itaque numquam ipsa! Dolorem et, eos repellendus ex ipsa iusto maiores sapiente voluptatibus repudiandae iste.
-    </p>
-
-<button>Peanut</button>
-
-<script src="pozdrav.js"></script>
-
+    <p id="greet"></p>
 
 </body>
+<script src="pozdrav.js"></script>
 </html>
