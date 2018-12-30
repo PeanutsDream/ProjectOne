@@ -6,19 +6,39 @@
     <title>Simple Script</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css" crossorigin="anonymous">
     <script src="main.js"></script>
 </head>
 <body>
-        <p>Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</p>
 
-        <input type="text" size="40" onkeypress="myFunction(event)">
+    <div class="container-fluid p-3 mb-2 bg-dark text-white cmain">
+        <p>Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</p>
+        <input type="text" size="40" id="pole1">
         
+        <button onclick="myFunction(event)">Podej si me</button>
+        
+    </div>
+    <div class=" container1 container p-3 mb-2 bg-secondary text-white">
         <p id="demo"></p>
+
+
+    </div>
+     
     <script>
         function myFunction(event) {
-  var x = event.which || event.keyCode;
-  document.getElementById("demo").innerHTML = "The Unicode value is: " + x;
-}</script>
+            var x = document.getElementById("pole1");
+            var pocet = 5; 
+            var i;
+            var obrazec = "";
+            for (i = 0; i < pocet; i++) {
+                obrazec += x + "<br>";
+            }
+            document.getElementById("demo").innerHTML = obrazec;
+        }
+
+        
+    }
+</script>
 
 
 </body>
