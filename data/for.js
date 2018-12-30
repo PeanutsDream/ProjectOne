@@ -2,7 +2,6 @@ var readline = require('readline-sync');
 var znak = readline.question("Zadejte Znak: ");
 var readline = require('readline-sync');
 var pocet = readline.question("Zadejte Pocet: ");
-
 if (pocet > 20) {
     console.log("Počet je větší než 20!")
 }
