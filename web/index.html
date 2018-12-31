@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -37,13 +38,24 @@
         
         <h1 class="display-2 center">Tvůj obrazec</h1>
         <br>
+        <div class="alert alert-danger" role="alert">
+
+            <div class="spinner-grow text-danger" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <a> Script currently not working!</a>
+
+          </div>
         <div class="row center mar">
             <div class="col-sm">
             </div>
             <div class="col-sm">
                 <div id="rcorners2">
-                    <button onclick="myFunction()">Try it</button>
-                
+                    <br>
+                    <br>
+                    <p id="demo">
+
+                    </p>
                 </div>
 
             
@@ -70,10 +82,9 @@
         
         var znak = "*";
         var pocet = 10;
-
             for (var _i = 0; _i < (pocet); _i++) {
-            /*document.getElementById("demo").innerHTML = znak.repeat(pocet);*/
-            document.write(znak.repeat(pocet)+ "<br>");
+            /*document.getElementById("demo").innerHTML = znak.repeat(pocet) +'<br>';*/
+            alert(znak.repeat(pocet) +'<br>');
         } 
         
         
