@@ -42,7 +42,7 @@
             </div>
             <div class="col-sm">
                 <div id="rcorners2">
-                    <p id="demo"></p>
+                    <button onclick="myFunction()">Try it</button>
                 
                 </div>
 
@@ -63,14 +63,32 @@
      
     <script>
        
+       
+
+
+    function myFunction() {
+        
+        var znak = "*";
+        var pocet = 10;
+
+            for (var _i = 0; _i < (pocet); _i++) {
+            /*document.getElementById("demo").innerHTML = znak.repeat(pocet);*/
+            document.write(znak.repeat(pocet)+ "<br>");
+        } 
+        
+        
+    
+    }
+
+/*
         var znak = "*";
         var pocet = 10;
 
             for (var _i = 0; _i < (pocet); _i++) {
             document.getElementById("demo").innerHTML = znak.repeat(pocet);
-
+            
         } 
-
+*/
    
         function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
         
