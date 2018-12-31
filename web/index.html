@@ -12,32 +12,69 @@
 <body>
 
     <div class="container-fluid p-3 mb-2 bg-dark text-white cmain">
-        <p>Press a key on the keyboard in the input field to get the Unicode character code of the pressed key.</p>
-        <input type="text" size="40" id="pole1">
+        <p>Zde zadej promenne</p>
+
+        <div class="row center row1">
+            <div class="col-md">
+                
+            </div>
+            <div class="col-md">
+                <input type="text" id="ip2"/>
+                <input type="text" id="ip3"/>
+                
+            </div>
+            <div class="col-md le">
+                <button class="btn1 button1" onclick="myFunction(event)"></button>
+            </div>
+          </div>
+
+
         
-        <button onclick="myFunction(event)">Podej si me</button>
         
     </div>
-    <div class=" container1 container p-3 mb-2 bg-secondary text-white">
-        <p id="demo"></p>
+    <div class="container1 container p-3 mb-2 bg-secondary text-white">
+        
+        
+        <h1 class="display-2 center">Tvůj obrazec</h1>
+        <br>
+        <div class="row center mar">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+                <div id="rcorners2">
+                    <p id="demo"></p>
+                
+                </div>
+
+            
+
+                
+
+            </div>
+            <div class="col-sm">
+            </div>
+          </div>
+
+
+
 
 
     </div>
      
     <script>
-        function myFunction(event) {
-            var x = document.getElementById("pole1");
-            var pocet = 5; 
-            var i;
-            var obrazec = "";
-            for (i = 0; i < pocet; i++) {
-                obrazec += x + "<br>";
-            }
-            document.getElementById("demo").innerHTML = obrazec;
-        }
+       
+        var znak = "*";
+        var pocet = 10;
 
+            for (var _i = 0; _i < (pocet); _i++) {
+            document.getElementById("demo").innerHTML = znak.repeat(pocet);
+
+        } 
+
+   
+        function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
         
-</script>
+    </script>
 
 
 </body>

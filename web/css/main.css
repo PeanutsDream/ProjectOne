@@ -1,6 +1,65 @@
 .container1 {
     height: 900px;
+    border-radius: 25px;
+    outline: none;
 }
 .cmain {
     text-align: center;
+    outline: none;
+    
+}
+#rcorners2 {
+    border-radius: 25px;
+    border: 3.5px solid white;
+    background-color: #D3D3D3;
+    color: black;
+    padding: 20px; 
+    width: 480px;
+    height: 480px;
+    font-size: 40px;
+    outline: none;
+    
+  }
+.center{
+    text-align: center;
+    outline: none;
+}
+.mar{
+    margin-top: 10%;
+    outline: none;
+}
+.btn1 {
+    border-radius: 25px;
+    border: 2px solid grey;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;
+    outline: none; 
+    width: 12%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.button1:hover {
+    background-color: grey;
+    outline: none;
+}
+#ip2 {
+    border-radius: 25px;
+    border: 2px solid grey;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;
+    outline: none;    
+}
+#ip3 {
+    border-radius: 25px;
+    border: 2px solid grey;
+    padding: 20px; 
+    width: 200px;
+    height: 15px;
+    outline: none;    
+}
+.le {
+    text-align: left;
 }
