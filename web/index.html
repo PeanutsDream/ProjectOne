@@ -80,12 +80,13 @@
 
     function myFunction() {
         
+        var element = document.getElementById('demo');
         var znak = "*";
         var pocet = 10;
             for (var _i = 0; _i < (pocet); _i++) {
             /*document.getElementById("demo").innerHTML = znak.repeat(pocet) +'<br>';
             alert(znak.repeat(pocet) +'<br>');*/
-            $("demo").html(znak.repeat(pocet) +'<br>');
+            element.innerHTML = element.innerHTML + znak.repeat(pocet) +'<br>';
         } 
         
         
