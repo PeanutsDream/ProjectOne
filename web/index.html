@@ -13,54 +13,39 @@
 <body>
 
     <div class="container-fluid p-3 mb-2 bg-dark text-white cmain">
-        <p>Zde zadej promenne</p>
-
+            <h1 class="display-5 center">Vyplň pole</h1>
+            <br>
         <div class="row center row1">
             <div class="col-md">
                 
             </div>
-            <div class="col-md">
-                <input type="text" id="ip2"/>
-                <input type="text" id="ip3"/>
+            <div class="col-md">   
+                <input maxlength="1" placeholder="Znak" type="text" id="ip2" required/>
+                <input minlenght="1" maxlength="2" placeholder="Číslo" pattern="[0-9.]{20}" type="text" id="ip3" required/>
                 
             </div>
             <div class="col-md le">
-                <button class="btn1 button1" onclick="myFunction(event)"></button>
+                <button class="btn1 button1" onclick="myFunction(event)"></button> 
             </div>
           </div>
-
-
-        
         
     </div>
     <div class="container1 container p-3 mb-2 bg-secondary text-white">
         
-        
-        <h1 class="display-2 center">Tvůj obrazec</h1>
+
+
+        <h1 class="display-3 center">Tvůj obrazec</h1>
         <br>
-        <div class="alert alert-danger" role="alert">
+        <br>
 
-            <div class="spinner-grow text-danger" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-            <a> Script currently not working!</a>
-
-          </div>
-        <div class="row center mar">
+        <div class="row center ">
             <div class="col-sm">
             </div>
-            <div class="col-sm">
+            <div class="col-sm-auto">
                 <div id="rcorners2">
-                    <br>
-                    <br>
                     <p id="demo">
-
                     </p>
                 </div>
-
-            
-
-                
 
             </div>
             <div class="col-sm">
@@ -79,30 +64,25 @@
 
 
     function myFunction() {
-        
+
+        document.getElementById("demo").innerHTML = "";
         var element = document.getElementById('demo');
-        var znak = "*";
-        var pocet = 10;
+        var znak = document.getElementById("ip2").value;
+        var pocet = document.getElementById("ip3").value;
+
+        if (pocet>20) {
+            alert("Počet nesmí přesahovat 20!")
+        }
+        else {
             for (var _i = 0; _i < (pocet); _i++) {
-            /*document.getElementById("demo").innerHTML = znak.repeat(pocet) +'<br>';
-            alert(znak.repeat(pocet) +'<br>');*/
-            element.innerHTML = element.innerHTML + znak.repeat(pocet) +'<br>';
-        } 
-        
-        
-    
+                /*document.getElementById("demo").innerHTML = znak.repeat(pocet) +'<br>';
+                alert(znak.repeat(pocet) +'<br>');*/
+                element.innerHTML = element.innerHTML + znak.repeat(pocet) +'<br>';
+            } 
+        }
+
+ 
     }
-
-/*
-        var znak = "*";
-        var pocet = 10;
-
-            for (var _i = 0; _i < (pocet); _i++) {
-            document.getElementById("demo").innerHTML = znak.repeat(pocet);
-            
-        } 
-*/
-   
         function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
         
     </script>

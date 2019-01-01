@@ -13,12 +13,10 @@
     border: 3.5px solid white;
     background-color: #D3D3D3;
     color: black;
-    padding: 20px; 
-    width: 480px;
-    height: 480px;
-    font-size: 40px;
+    font-size: 18px;
     outline: none;
-    
+    text-align: center;
+    padding: 45px;
   }
 .center{
     text-align: center;
@@ -50,7 +48,7 @@
     padding: 20px; 
     width: 200px;
     height: 15px;
-    outline: none;    
+    outline: none;   
 }
 #ip3 {
     border-radius: 25px;
@@ -62,4 +60,13 @@
 }
 .le {
     text-align: left;
+}
+input:invalid {
+    background: hsla(0, 90%, 70%, 1);
+  }
+  
+input:valid {
+    background: hsla(100, 90%, 70%, 1);
+  }
+input::placeholder { color: white;
 }
